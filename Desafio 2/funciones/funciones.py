@@ -1,10 +1,10 @@
 from UTN_Heroes_Dataset.utn_matrices import matriz_data_heroes
 
 def info_heroe(indice: int):
-    indice = int(indice)
     info = ""
     for lista in matriz_data_heroes:
-        info += (f"{lista[indice]:10}|")
+        dato = str(lista[indice])
+        info += (f"{dato[:25]:<25}|")
     print (info)
 
 
@@ -28,3 +28,28 @@ def utn_mostrar_cantidad_heroes_femeninos(matriz_heroes) -> None:
     print(f"La cantidad de heroes femeninos es {cantidad_femenino}")
 
 
+def cant_heroes_masculinos():
+    contador = 0
+    for i in matriz_data_heroes[3]:
+        if i == "Masculino":
+            contador += 1
+    print(contador)
+
+#info_heroe(0)
+
+
+def heroes_mayores_a_160m():
+    contador = 0
+    for i in range (len (matriz_data_heroes[-1])):
+        if matriz_data_heroes[-1][i] > 160:
+            contador += 1
+            info_heroe(i)
+    print(contador)
+
+
+
+if __name__ == '__main__':
+    # Aca pone las funciones para ver si funcionan, solo sirven aca.
+    # Despues yo las linkeo para que anden con el menu.
+    cant_heroes_masculinos()
+    heroes_mayores_a_160m()

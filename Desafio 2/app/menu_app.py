@@ -1,7 +1,8 @@
 from UTN_Heroes_Dataset.utn_funciones import *
 
 from funciones import (
-    mostrar_menu, utn_mostrar_cantidad_heroes_femeninos
+    mostrar_menu, utn_mostrar_cantidad_heroes_femeninos,
+    cant_heroes_masculinos, heroes_mayores_a_160m
     
     )
 
@@ -20,11 +21,11 @@ def utn_heroes_app(matriz_heroes):
             case 1:
                 utn_mostrar_cantidad_heroes_femeninos(matriz_heroes)
             case 2:
-                pass
+                cant_heroes_masculinos()
             case 3:
                 pass
             case 4:
-                pass
+                heroes_mayores_a_160m()
             case 5:
                 pass
             case 6:
