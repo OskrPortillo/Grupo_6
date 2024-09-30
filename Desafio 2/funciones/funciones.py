@@ -7,8 +7,27 @@ def info_heroe(indice: int):
         info += (f"{dato[:25]:<25}|")
     print (info)
 
+def utn_filtrar_heroes_femeninos_poder_mayor_a_60(matriz_heroes)->None:
+    """
+    Función que muestra los héroes femeninos cuyo poder sea mayor a 60.
+
+    Args:
+        matriz_heroes (_type_): lista[lista]
+    """
+    cantidad_columnas = len(matriz_heroes[3])
+
+    for columna in range (cantidad_columnas):
+        if matriz_heroes[3][columna] == "Femenino" and matriz_heroes[4][columna] > 60:
+            info_heroe(columna)
+            
 
 def utn_mostrar_heroes_poder_mayor_a_75(matriz_heroes)-> None:
+    """
+    Función que muestra los héroes cuyo poder sea mayor a 75.
+
+    Args:
+        matriz_heroes (_type_): lista[lista]
+    """
     
     cantidad_columnas = len(matriz_heroes[4])
     for columna in range(cantidad_columnas):
