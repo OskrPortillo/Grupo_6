@@ -1,6 +1,9 @@
 from UTN_Heroes_Dataset.utn_funciones import *
 
-from funciones import mostrar_menu
+from funciones import (
+    mostrar_menu, utn_mostrar_cantidad_heroes_femeninos
+    
+    )
 
 from validaciones import validar_opcion
 
@@ -15,7 +18,7 @@ def utn_heroes_app(matriz_heroes):
 
         match opcion:
             case 1:
-                pass
+                utn_mostrar_cantidad_heroes_femeninos(matriz_heroes)
             case 2:
                 pass
             case 3:
