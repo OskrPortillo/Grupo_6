@@ -7,6 +7,22 @@ def info_heroe(indice: int):
         info += (f"{dato[:25]:<25}|")
     print (info)
 
+def utn_filtrar_no_binarios_poder_10_a_50(matriz_heroes):
+    """
+    Función que muestra los héroes no-binarios cuyo poder este comprendido
+    entre 10 y 50 inclusive.
+
+    Args:
+        matriz_heroes (_type_): lista[lista]
+    """
+    #Fila de genero
+    cantidad_columnas = len(matriz_heroes[3])
+
+    for columna in range (cantidad_columnas):
+        if matriz_heroes[3][columna] == "No-Binario" and  10 <= matriz_heroes[4][columna] <= 50:
+            info_heroe(columna)
+
+
 def utn_filtrar_heroes_femeninos_poder_mayor_a_60(matriz_heroes)->None:
     """
     Función que muestra los héroes femeninos cuyo poder sea mayor a 60.
@@ -14,6 +30,7 @@ def utn_filtrar_heroes_femeninos_poder_mayor_a_60(matriz_heroes)->None:
     Args:
         matriz_heroes (_type_): lista[lista]
     """
+    #Fila de genero
     cantidad_columnas = len(matriz_heroes[3])
 
     for columna in range (cantidad_columnas):
@@ -28,8 +45,9 @@ def utn_mostrar_heroes_poder_mayor_a_75(matriz_heroes)-> None:
     Args:
         matriz_heroes (_type_): lista[lista]
     """
-    
+    #Fila de poder
     cantidad_columnas = len(matriz_heroes[4])
+    
     for columna in range(cantidad_columnas):
         if matriz_heroes[4][columna] > 75:
             info_heroe(columna)
