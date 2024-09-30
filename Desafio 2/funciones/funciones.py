@@ -8,6 +8,13 @@ def info_heroe(indice: int):
     print (info)
 
 
+def utn_mostrar_heroes_poder_mayor_a_75(matriz_heroes)-> None:
+    
+    cantidad_columnas = len(matriz_heroes[4])
+    for columna in range(cantidad_columnas):
+        if matriz_heroes[4][columna] > 75:
+            info_heroe(columna)
+
 def utn_mostrar_cantidad_heroes_femeninos(matriz_heroes) -> None:
     """
     Función que cuenta la cantidad de héroes de género femenino en 
