@@ -9,7 +9,12 @@ def info_heroe(indice: int):
 
 
 def utn_mostrar_cantidad_heroes_femeninos(matriz_heroes) -> None:
-    
+    """
+    Función que cuenta la cantidad de héroes de género femenino en 
+    una matriz dada y muestra el resultado.
+    Args:
+        matriz_heroes (_type_): list[list]
+    """
     cantidad_filas = len(matriz_heroes)
     cantidad_columnas = len(matriz_heroes[0])
     cantidad_femenino = 0
@@ -21,3 +26,5 @@ def utn_mostrar_cantidad_heroes_femeninos(matriz_heroes) -> None:
                 cantidad_femenino += 1
     
     print(f"La cantidad de heroes femeninos es {cantidad_femenino}")
+
+
