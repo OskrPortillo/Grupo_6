@@ -1,10 +1,13 @@
 from UTN_Heroes_Dataset.utn_funciones import *
 
 from funciones import (
-    mostrar_menu, utn_mostrar_cantidad_heroes_femeninos,
+    mostrar_menu, 
+    utn_mostrar_cantidad_heroes_femeninos,
     utn_mostrar_heroes_poder_mayor_a_75,
     utn_filtrar_heroes_femeninos_poder_mayor_a_60,
     utn_filtrar_no_binarios_poder_10_a_50,
+    utn_mostrar_heroes_maxima_altura,
+    utn_ordenar_apodo_descendente,
     cant_heroes_masculinos, heroes_mayores_a_160m
     
     )
@@ -38,11 +41,11 @@ def utn_heroes_app(matriz_heroes):
             case 8:
                 pass
             case 9:
-                pass
+                utn_mostrar_heroes_maxima_altura(matriz_heroes)
             case 10: 
                 pass
             case 11:
-                pass
+                utn_ordenar_apodo_descendente(matriz_heroes)
             case 12:
                 pass
             case 13: # Salir del programa

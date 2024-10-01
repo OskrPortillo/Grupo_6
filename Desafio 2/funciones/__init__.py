@@ -5,5 +5,7 @@ utn_mostrar_cantidad_heroes_femeninos,
 utn_mostrar_heroes_poder_mayor_a_75,
 utn_filtrar_heroes_femeninos_poder_mayor_a_60,
 utn_filtrar_no_binarios_poder_10_a_50,
+utn_mostrar_heroes_maxima_altura,
+utn_ordenar_apodo_descendente,
 cant_heroes_masculinos, heroes_mayores_a_160m
 )
