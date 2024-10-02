@@ -174,10 +174,68 @@ def heroes_mayores_a_160m():
             info_heroe(i)
     print(contador)
 
+def cant_masculinos():
+    contador = 0
+    for i in matriz_data_heroes[3]:
+        if i == "Masculino":
+            contador += 1
+    print(contador)
 
+def masc_poder_menor_60():
+    for i in range (len(matriz_data_heroes[0])):
+        if matriz_data_heroes[3][i] == "Masculino" and int(matriz_data_heroes[-2][i]) < 60:
+            info_heroe(i)
+        
+def minimo_poder():
+    mas_debil = None
+    for i in matriz_data_heroes[-2]:
+        if mas_debil == None or (i <= mas_debil):
+            mas_debil = i
+    return mas_debil
+
+def cant_debiles():
+    contador = 0
+    for i in matriz_data_heroes[-2]:
+        if i == minimo_poder():
+            contador += 1
+    return contador
+
+lista = matriz_data_heroes[0][-10:-1]
+def nombres_alfabeticos():
+    # Tomo un elemento de la lista
+    for i in range(len(matriz_data_heroes[0]) - 1):
+        # Recorro el resto de los elementos para comparar cuales cumplen el criterio
+        # de ordenamiento 
+        for j in range(i + 1, len(matriz_data_heroes[0])):
+            # Si los elementos no estan ordenados, los intercambio
+            if matriz_data_heroes[0][i] < matriz_data_heroes[0][j]:
+                #(lista[i], lista[j]) = (lista[j], lista[i])
+                aux = matriz_data_heroes[0][i]
+                matriz_data_heroes[0][i] = matriz_data_heroes[0][j]
+                matriz_data_heroes[0][j] = aux
+
+def ordenar_por_altura():
+    orden = int(input("Ingrese modo de ordenamiento:\n1-Ascendente\n2-Descendente\nOPCION: "))
+    if orden == 1:
+        for i in range(len(matriz_data_heroes[-1]) - 1):
+            for j in range(i + 1, len(matriz_data_heroes[-1])):
+                if matriz_data_heroes[-1][i] > matriz_data_heroes[-1][j]:
+                    aux = matriz_data_heroes[-1][i]
+                    matriz_data_heroes[-1][i] = matriz_data_heroes[-1][j]
+                    matriz_data_heroes[-1][j] = aux
+    elif orden == 2:
+        for i in range(len(matriz_data_heroes[-1]) - 1):
+            for j in range(i + 1, len(matriz_data_heroes[-1])):
+                if matriz_data_heroes[-1][i] < matriz_data_heroes[-1][j]:
+                    aux = matriz_data_heroes[-1][i]
+                    matriz_data_heroes[-1][i] = matriz_data_heroes[-1][j]
+                    matriz_data_heroes[-1][j] = aux
 
 if __name__ == '__main__':
     # Aca pone las funciones para ver si funcionan, solo sirven aca.
     # Despues yo las linkeo para que anden con el menu.
-    cant_heroes_masculinos()
-    heroes_mayores_a_160m()
+    #print((matriz_data_heroes[-1][-1]))
+    #print(cant_debiles())
+    ordenar_por_altura()
+    print(matriz_data_heroes[-1])
+    #info_heroe(-1)
