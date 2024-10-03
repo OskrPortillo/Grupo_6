@@ -7,6 +7,10 @@ def info_heroe(indice: int):
         info += (f"{dato[:25]:<25}|")
     print (info)
 
+def mostar_matriz_como_planilla():
+    for indice in range(len(matriz_data_heroes[0])):
+        info_heroe(indice)
+        
 def selection_sort(matriz_heroes, orden_ascendente = True) -> None:
     """
     Función que recibe una matriz y la ordenada de forma ascendente
@@ -155,54 +159,48 @@ def utn_mostrar_cantidad_heroes_femeninos(matriz_heroes) -> None:
     
     print(f"La cantidad de heroes femeninos es {cantidad_femenino}")
 
-
-def cant_heroes_masculinos():
+def cant_heroes_masculinos() -> str:
+    #Funcion que calcula la cantidad de heroes masculinos en la matriz
     contador = 0
-    for i in matriz_data_heroes[3]:
-        if i == "Masculino":
+    for genero in matriz_data_heroes[3]:
+        #Recorro la sub-lista de generos
+        if genero == "Masculino":
+            #En cada iteracion verifico el genero, y si es masculino incremento en 1 el contador de masculinos
             contador += 1
-    print(contador)
+    print(f"La cantidad de heroes masculinos es: {contador}")
 
-#info_heroe(0)
-
-
-def heroes_mayores_a_160m():
-    contador = 0
+def heroes_mayores_a_160m() -> str:
+    #Funcion que muestra los datos asociados de los heroes ccon una altura mayor a 160m
     for i in range (len (matriz_data_heroes[-1])):
         if matriz_data_heroes[-1][i] > 160:
-            contador += 1
+            #Si la altura en el indice de la iteracion es mayor a 160 lo paso como parametro a la funcion que muestra los datos de un heroe especifico
             info_heroe(i)
-    print(contador)
 
-def cant_masculinos():
-    contador = 0
-    for i in matriz_data_heroes[3]:
-        if i == "Masculino":
-            contador += 1
-    print(contador)
-
-def masc_poder_menor_60():
+def masc_poder_menor_60() -> str:
+    #Funcion que filtra y muestra los heroes con poder menor a 60
     for i in range (len(matriz_data_heroes[0])):
         if matriz_data_heroes[3][i] == "Masculino" and int(matriz_data_heroes[-2][i]) < 60:
             info_heroe(i)
         
-def minimo_poder():
+def minimo_poder() -> int:
+    #Funcion que retorna el poder mas bajo
     mas_debil = None
     for i in matriz_data_heroes[-2]:
         if mas_debil == None or (i <= mas_debil):
             mas_debil = i
     return mas_debil
 
-def cant_debiles():
+def cant_debiles() -> int:
+    #Funcion que retorna la cantidad de heroes cuyo poder es igual al minimo
     contador = 0
     for i in matriz_data_heroes[-2]:
         if i == minimo_poder():
+            #Comparo el contenido del indice actual en la lista de poderes con el valor retornado de la funcion creada anteriormente
             contador += 1
-    return contador
+    print(f"{contador} heroe/s con el minimo poder de {minimo_poder()}")
 
-lista = matriz_data_heroes[0][-10:-1]
-def nombres_alfabeticos():
-    # Tomo un elemento de la lista
+def nombres_alfabeticos() -> None:
+    # Funcion que ordena alfabeticamente los nombres de la lista de nombres
     for i in range(len(matriz_data_heroes[0]) - 1):
         # Recorro el resto de los elementos para comparar cuales cumplen el criterio
         # de ordenamiento 
@@ -214,8 +212,10 @@ def nombres_alfabeticos():
                 matriz_data_heroes[0][i] = matriz_data_heroes[0][j]
                 matriz_data_heroes[0][j] = aux
 
-def ordenar_por_altura():
+def ordenar_por_altura() ->None:
+    #Funcion que ordena la lista de alturas segun el valor que ingrese el usuario
     orden = int(input("Ingrese modo de ordenamiento:\n1-Ascendente\n2-Descendente\nOPCION: "))
+    #Se solicita al usuario ingresar el numero asociado al tipo de ordenamiento los cuales son mostrados en un mensaje
     if orden == 1:
         for i in range(len(matriz_data_heroes[-1]) - 1):
             for j in range(i + 1, len(matriz_data_heroes[-1])):

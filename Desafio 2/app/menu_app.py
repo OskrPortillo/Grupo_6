@@ -8,7 +8,10 @@ from funciones import (
     utn_filtrar_no_binarios_poder_10_a_50,
     utn_mostrar_heroes_maxima_altura,
     utn_ordenar_apodo_descendente,
-    cant_heroes_masculinos, heroes_mayores_a_160m
+    cant_heroes_masculinos, heroes_mayores_a_160m,
+    masc_poder_menor_60, minimo_poder,
+    cant_debiles, nombres_alfabeticos,
+    ordenar_por_altura, mostar_matriz_como_planilla
     
     )
 
@@ -35,19 +38,21 @@ def utn_heroes_app(matriz_heroes):
             case 5:
                 utn_filtrar_heroes_femeninos_poder_mayor_a_60(matriz_heroes)
             case 6:
-                pass
+                masc_poder_menor_60()
             case 7:
                 utn_filtrar_no_binarios_poder_10_a_50(matriz_heroes)
             case 8:
-                pass
+                cant_debiles()
             case 9:
                 utn_mostrar_heroes_maxima_altura(matriz_heroes)
             case 10: 
-                pass
+                nombres_alfabeticos()
+                mostar_matriz_como_planilla()
             case 11:
                 utn_ordenar_apodo_descendente(matriz_heroes)
             case 12:
-                pass
+                ordenar_por_altura()
+                mostar_matriz_como_planilla()
             case 13: # Salir del programa
                 break
             

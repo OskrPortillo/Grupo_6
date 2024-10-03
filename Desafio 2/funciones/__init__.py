@@ -7,5 +7,8 @@ utn_filtrar_heroes_femeninos_poder_mayor_a_60,
 utn_filtrar_no_binarios_poder_10_a_50,
 utn_mostrar_heroes_maxima_altura,
 utn_ordenar_apodo_descendente,
-cant_heroes_masculinos, heroes_mayores_a_160m
+cant_heroes_masculinos, heroes_mayores_a_160m,
+masc_poder_menor_60, minimo_poder,
+cant_debiles, nombres_alfabeticos,
+ordenar_por_altura, mostar_matriz_como_planilla
 )
