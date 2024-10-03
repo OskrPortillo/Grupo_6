@@ -232,8 +232,6 @@ def ordenar_por_altura() ->None:
                     matriz_data_heroes[-1][j] = aux
 
 if __name__ == '__main__':
-    # Aca pone las funciones para ver si funcionan, solo sirven aca.
-    # Despues yo las linkeo para que anden con el menu.
     #print((matriz_data_heroes[-1][-1]))
     #print(cant_debiles())
     #ordenar_por_altura()
