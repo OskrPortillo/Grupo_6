@@ -206,7 +206,7 @@ def nombres_alfabeticos() -> None:
         # de ordenamiento 
         for j in range(i + 1, len(matriz_data_heroes[0])):
             # Si los elementos no estan ordenados, los intercambio
-            if matriz_data_heroes[0][i] < matriz_data_heroes[0][j]:
+            if matriz_data_heroes[0][i] > matriz_data_heroes[0][j]:
                 #(lista[i], lista[j]) = (lista[j], lista[i])
                 aux = matriz_data_heroes[0][i]
                 matriz_data_heroes[0][i] = matriz_data_heroes[0][j]
@@ -236,6 +236,6 @@ if __name__ == '__main__':
     # Despues yo las linkeo para que anden con el menu.
     #print((matriz_data_heroes[-1][-1]))
     #print(cant_debiles())
-    ordenar_por_altura()
-    print(matriz_data_heroes[-1])
+    #ordenar_por_altura()
+    print("b">"a")
     #info_heroe(-1)
